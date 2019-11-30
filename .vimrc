@@ -89,7 +89,7 @@ let g:racer_insert_paren=1
 colorscheme afterglow
 
 """ Notes
-""" Plugins' quirkiness
+""" Plugins quirkiness
 "" rust.vim
 " For rust.vim's syntastic integration to work, we have ot run cargo check in a project
 " first.
@@ -138,6 +138,15 @@ colorscheme afterglow
 """ Key Mappings
 "" inoremap
 "" nnoremap
+
+""" Auto Completion in Insert Mode
+" C-n, C-p: similar word in current file
+" C-x, C-l: line completion
+" C-x C-k: dictionary completion (need to `set dictionary={file}`)
+
+""" Edit Shortcuts in Insert Mode
+" C-w: erase word
+" C-u: erase line
 
 """ Package Manager and Installing Plugins
 " Vim8 comes with a package manager. Before Vim8, people usually use Pathogen, Vundle, etc.
