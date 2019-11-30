@@ -16,3 +16,9 @@ do
     git clone "$line" 2>/dev/null
     popd > /dev/null
 done <"$list_file"
+
+# install colorschemes
+pushd ~/.vim
+git clone git@github.com:flazz/vim-colorschemes.git
+mv vim-colorschemes/colors .
+rm -rf vim-colorschemes
