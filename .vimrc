@@ -1,5 +1,7 @@
 " Indent automatically depending on filetype
-filetype indent on " how does this solve the 'omnifunc is not set' issue?
+filetype on
+" make sure flietype plugin is on so that .vim files under ftplugin/ are loaded
+filetype plugin indent on " how does this solve the 'omnifunc is not set' issue?
 set autoindent
 
 " Turn on line numbering. Turn it off with set nonu
@@ -13,9 +15,6 @@ set hls "set hlsearch is also valid
 
 " Wrap text instead of being on one line
 "set lbr
-
-" Change colorscheme from default to delek
-colorscheme delek
 
 " Show the filename of the file currently being edited
 set laststatus=2
@@ -72,6 +71,27 @@ let g:racer_insert_paren=1
 
 
 """ Notes
+""" Plugins' quirkiness
+"" rust.vim
+" For rust.vim's syntastic integration to work, we have ot run cargo check in a project
+" first.
+" rust.vim was originally placed under rust.vim/ftplugin/. However, it seems that
+" vim8 doesn't load the .vim file under ftplugin. I could run functions defined in
+" .vim files under autoload/, but additional mappings (e.g., key bindings) defined in
+" ftplugin/ are not loaded.
+" UPDATE: see below vim-racer for solution
+
+"" vim-racer
+" rust_racer.vim was originally placed under vim-racer/ftplugin/. However, it seems that
+" vim8 doesn't load the .vim file under ftplugin. Renaming ftplugin/ to plugin/ solved
+" the issue.
+" UPDATE: renaming was the wrong fix. The right thing to do is to turn filetyle plugin on
+" by `filetype plugin on`. This enables loading plugin files for specific file types.
+
+"" tagbar
+" Use Universal Ctags instead of Exuberant Ctags!
+
+
 """ Options
 " `Options` are Vim's internal variables. There are 2 categories of options:
 " terminal options and other (regular) options. 

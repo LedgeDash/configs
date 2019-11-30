@@ -1,7 +1,4 @@
 #!/bin/bash
-echo "setup bash and vim"
-echo "$(dirname "$0")/.vimrc"
-
 # check existence of .vimrc, .vim/, .vim/pack/plugins/start
 mkdir -p ~/.vim/pack/plugins/start
 if [[ -f ~/.vimrc && ! -f ~/.vimrc.old ]]; then
@@ -14,8 +11,8 @@ cp "$(dirname "$0")/.vimrc" ~/.vimrc
 list_file="$(dirname "$0")/plugins.list"
 while IFS= read -r line
 do
-    echo "$line"
-    pushd ~/.vim/pack/plugins/start
-    git clone "$line"
+    echo "installing $line"
+    pushd ~/.vim/pack/plugins/start > /dev/null
+    git clone "$line" 2>/dev/null
     popd > /dev/null
 done <"$list_file"

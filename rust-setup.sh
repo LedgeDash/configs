@@ -24,3 +24,4 @@ rustup component add rustfmt --toolchain nightly
 # see: https://github.com/racer-rust/racer
 cargo +nightly install racer
 
+rustup update
