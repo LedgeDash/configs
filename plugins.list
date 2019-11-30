@@ -1,0 +1,5 @@
+git@github.com:vim-syntastic/syntastic.git
+git@github.com:majutsushi/tagbar.git
+git@github.com:racer-rust/vim-racer.git
+git@github.com:rust-lang/rust.vim.git
+git@github.com:tpope/vim-surround.git

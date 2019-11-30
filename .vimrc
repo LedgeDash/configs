@@ -37,33 +37,38 @@ nnoremap td  :tabclose<CR>
 nnoremap tn  :tabnew<CR>
 
 " tagbar toggle
+" We want Universal Ctags instead of exuberant ctags for Rust to work well.
+" See: https://github.com/universal-ctags/ctags
+" It needs to be built from source with Autotool
+" And make sure exuberant ctags is removed
 nmap <F8> :TagbarToggle<CR>
 
 " vim racer
+set hidden
 au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
 au FileType rust nmap gx <Plug>(rust-def-vertical)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
 " completions to show the complete function definition (e.g. its arguments and
 " return type)
-let g:racer_experimental_completer = 1
+let g:racer_experimental_completer=1
 " insert the parenthesis in the completion
-let g:racer_insert_paren = 1
+let g:racer_insert_paren=1
 
 " show a horizontal cursorline. Often set temporarily by Netrw
 "set cursorline
 
 " Custom key bindings
-inoremap wj <ESC>
+"inoremap wj <ESC>
 "" Ctrl-s to save
-inoremap <C-s> <Esc>:w<CR>
-nnoremap <C-s> <Esc>:w<CR>
+"inoremap <C-s> <Esc>:w<CR>
+"nnoremap <C-s> <Esc>:w<CR>
 "" Ctrl-wq to quit
-inoremap <C-w><C-q> <Esc>:wq<CR>
-nnoremap <C-w><C-q> <Esc>:wq<CR>
+"inoremap <C-w><C-q> <Esc>:wq<CR>
+"nnoremap <C-w><C-q> <Esc>:wq<CR>
 "" Ctrl-q to quit without saving
-inoremap <C-q> <Esc>:q!<CR>
-nnoremap <C-q> <Esc>:q!<CR>
+"inoremap <C-q> <Esc>:q!<CR>
+"nnoremap <C-q> <Esc>:q!<CR>
 
 
 """ Notes
@@ -131,5 +136,3 @@ nnoremap <C-q> <Esc>:q!<CR>
 "
 " I'm not sure what each directory conventionally contains. Also don't really need to do for
 " I'm not planning to write a vim plugin any time soon.
-
-
