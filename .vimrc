@@ -1,6 +1,9 @@
 " Indent automatically depending on filetype
 filetype on
 " make sure flietype plugin is on so that .vim files under ftplugin/ are loaded
+" See: http://vimdoc.sourceforge.net/htmldoc/filetype.html
+" for more on filetype specific commands
+" Check the current buffer's filetype: `set filetype?`
 filetype plugin indent on " how does this solve the 'omnifunc is not set' issue?
 set autoindent
 
@@ -15,6 +18,7 @@ set hls "set hlsearch is also valid
 
 " Wrap text instead of being on one line
 "set lbr
+
 
 " Show the filename of the file currently being edited
 set laststatus=2
@@ -43,7 +47,13 @@ nnoremap tn  :tabnew<CR>
 nmap <F8> :TagbarToggle<CR>
 
 " vim racer
-set hidden
+" In addition to the following 'jump to defintion' commands, racer also
+" provides auto-completion. Use C-x C-o to trigger the omnifunc set by vim
+" racer, which calls racer to suggest auto-completion options.
+" This is different from the normal word, line and dictionary completion
+" function that vim already has in insert mode because it calls racer for
+" completion suggestion and does not rely on existing contents.
+set hidden " just saves a :w before jump to definition
 au FileType rust nmap gd <Plug>(rust-def)
 au FileType rust nmap gs <Plug>(rust-def-split)
 au FileType rust nmap gx <Plug>(rust-def-vertical)
@@ -69,6 +79,14 @@ let g:racer_insert_paren=1
 "inoremap <C-q> <Esc>:q!<CR>
 "nnoremap <C-q> <Esc>:q!<CR>
 
+" colorscheme
+" Just put a bunch of *.vim files under ~/.vim/colors
+" Good ones:
+" OceanicNext
+" SlateDark
+" Tomorrow-Night-Bright
+" afterglow
+colorscheme afterglow
 
 """ Notes
 """ Plugins' quirkiness
