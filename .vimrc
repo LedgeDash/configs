@@ -31,15 +31,31 @@ set softtabstop=4
 set tabstop=4
 
 " vim tabs
-nnoremap th  :tabfirst<CR>
-nnoremap tk  :tabnext<CR>
-nnoremap tj  :tabprev<CR>
-nnoremap tl  :tablast<CR>
-nnoremap tt  :tabedit<Space>
-nnoremap td  :tabclose<CR>
-nnoremap tn  :tabnew<CR>
+"nnoremap th  :tabfirst<CR>
+"nnoremap tk  :tabnext<CR>
+"nnoremap tj  :tabprev<CR>
+"nnoremap tl  :tablast<CR>
+"nnoremap tt  :tabedit<Space>
+"nnoremap td  :tabclose<CR>
+"nnoremap tn  :tabnew<CR>
+
+" vim buffers
+" use buffers instead of tabs
+" Actually a good argument:
+" https://joshldavis.com/2014/04/05/vim-tab-madness-buffers-vs-tabs/
+nnoremap tk  :bnext<CR>
+nnoremap tj  :bprev<CR>
+nnoremap th  :bfirst<CR>
+nnoremap tl  :blast<CR>
+nnoremap tc  :bd<CR>
+nnoremap tn  :enew<CR>
+
+" vim windows
+" :help windows
 
 " vim airline
+" For some information, see the documentation:
+" https://github.com/vim-airline/vim-airline/blob/master/doc/airline.txt
 " Automatically displays all buffers when there's only one tab open.
 let g:airline#extensions#tabline#enabled = 1
 " configure tabline
@@ -106,7 +122,7 @@ let g:racer_insert_paren=1
 " afterglow
 colorscheme afterglow
 
-""" Notes
+""" Notes:
 """ Plugins quirkiness
 "" rust.vim
 " For rust.vim's syntastic integration to work, we have ot run cargo check in a project
@@ -130,7 +146,7 @@ colorscheme afterglow
 
 """ Options
 " `Options` are Vim's internal variables. There are 2 categories of options:
-" terminal options and other (regular) options. 
+" terminal options and other (regular) options.
 " Not sure what terminal options are yet but seems that I rarely need to use them.
 "
 " These variables have 3 different types:
@@ -203,3 +219,7 @@ colorscheme afterglow
 "
 " I'm not sure what each directory conventionally contains. Also don't really need to do for
 " I'm not planning to write a vim plugin any time soon.
+"
+""" Ex Commands
+"" | or <BAR>
+" see more :help :bar
