@@ -4,3 +4,4 @@ git@github.com:racer-rust/vim-racer.git
 git@github.com:rust-lang/rust.vim.git
 git@github.com:tpope/vim-surround.git
 git@github.com:vim-airline/vim-airline.git
+git@github.com:vim-airline/vim-airline-themes.git

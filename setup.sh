@@ -18,7 +18,11 @@ do
 done <"$list_file"
 
 # install colorschemes
-pushd ~/.vim
-git clone git@github.com:flazz/vim-colorschemes.git
-mv vim-colorschemes/colors .
-rm -rf vim-colorschemes
+
+if [[ ! -d ~/.vim/colors ]]; then
+    pushd ~/.vim > /dev/null
+    git clone git@github.com:flazz/vim-colorschemes.git
+    mv vim-colorschemes/colors .
+    rm -rf vim-colorschemes
+    popd > /dev/null
+fi

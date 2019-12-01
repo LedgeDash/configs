@@ -39,6 +39,24 @@ nnoremap tt  :tabedit<Space>
 nnoremap td  :tabclose<CR>
 nnoremap tn  :tabnew<CR>
 
+" vim airline
+" Automatically displays all buffers when there's only one tab open.
+let g:airline#extensions#tabline#enabled = 1
+" configure tabline
+let g:airline#extensions#tabline#left_sep = ' | '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#right_sep = '|'
+let g:airline#extensions#tabline#right_alt_sep = '|'
+" airline themes
+" good ones:
+" base16_snazzy
+" ayu_dark
+" base16_atelierforest
+" base16_atelierlakeside
+" base16_bright
+" base16_default
+let g:airline_theme='base16_default'
+
 " tagbar toggle
 " We want Universal Ctags instead of exuberant ctags for Rust to work well.
 " See: https://github.com/universal-ctags/ctags
