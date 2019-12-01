@@ -134,6 +134,8 @@ colorscheme afterglow
 " down where in scripts an option is modified.
 " Example: `verbose set shiftwidth`, `verbose set cursorline?`
 " It seems that for boolean variables, we need the `?` at the end.
+"
+"" TODO: what about variable definitions with `let` and variable scopes?
 
 """ Key Mappings
 "" inoremap
