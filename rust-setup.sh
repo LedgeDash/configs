@@ -25,3 +25,5 @@ rustup component add rustfmt --toolchain nightly
 cargo +nightly install racer
 
 rustup update
+rustup default nightly
+rustup update
