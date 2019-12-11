@@ -58,3 +58,5 @@ if [[ -f ~/.profile && ! -f ~/.profile.old ]]; then
     mv ~/.profile ~/.profile.old
 fi
 cp "$(dirname "$0")/.profile" ~/.profile
+
+source ~/.bashrc
