@@ -1,4 +1,6 @@
 #!/bin/bash
+
+### Vim setup
 # check existence of .vimrc, .vim/, .vim/pack/plugins/start
 mkdir -p ~/.vim/pack/plugins/start
 if [[ -f ~/.vimrc && ! -f ~/.vimrc.old ]]; then
@@ -27,5 +29,27 @@ if [[ ! -d ~/.vim/colors ]]; then
     popd > /dev/null
 fi
 
+### Tmux setup
 # tmux config
-cp "$(dirname "$0")/.tmux.conf " ~
+if [[ -f ~/.tmux.conf && ! -f ~/.tmux.conf.old ]]; then
+    mv ~/.tmux.conf ~/.tmux.conf.old
+fi
+cp "$(dirname "$0")/.tmux.conf" ~/.tmux.conf
+
+
+### bash setup
+if [[ -f ~/.bashrc && ! -f ~/.bashrc.old ]]; then
+    echo "~/.bashrc already exists. Renaming it ~/.bashrc.old"
+    mv ~/.bashrc ~/.bashrc.old
+fi
+cp "$(dirname "$0")/.bashrc" ~/.bashrc
+
+if [[ -f ~/.bash_aliases && ! -f ~/.bash_aliases.old ]]; then
+    mv ~/.bash_aliases ~/.bash_aliases.old
+fi
+cp "$(dirname "$0")/.bash_aliases" ~/.bash_aliases
+
+if [[ -f ~/.bash_color && ! -f ~/.bash_color.old ]]; then
+    mv ~/.bash_color ~/.bash_color.old
+fi
+cp "$(dirname "$0")/.bash_color" ~/.bash_color
