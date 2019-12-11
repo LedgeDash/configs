@@ -26,3 +26,6 @@ if [[ ! -d ~/.vim/colors ]]; then
     rm -rf vim-colorschemes
     popd > /dev/null
 fi
+
+# tmux config
+cp "$(dirname "$0")/.tmux.conf " ~
