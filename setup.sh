@@ -53,3 +53,5 @@ if [[ -f ~/.bash_color && ! -f ~/.bash_color.old ]]; then
     mv ~/.bash_color ~/.bash_color.old
 fi
 cp "$(dirname "$0")/.bash_color" ~/.bash_color
+
+source ~/.bashrc
