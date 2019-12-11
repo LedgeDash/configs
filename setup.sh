@@ -53,3 +53,8 @@ if [[ -f ~/.bash_color && ! -f ~/.bash_color.old ]]; then
     mv ~/.bash_color ~/.bash_color.old
 fi
 cp "$(dirname "$0")/.bash_color" ~/.bash_color
+
+if [[ -f ~/.profile && ! -f ~/.profile.old ]]; then
+    mv ~/.profile ~/.profile.old
+fi
+cp "$(dirname "$0")/.profile" ~/.profile
