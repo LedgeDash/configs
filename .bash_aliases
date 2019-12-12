@@ -23,8 +23,8 @@ alias src='ctags -R; csr'
 alias gc='git commit'
 alias gs='git status'
 alias ga='git add'
-alias gp='git push'
-alias gu='git pull'
+alias gu='git push'
+alias gp='git pull'
 
 # Remote servers
 alias sns12a='ssh davidliu@sns12a'
