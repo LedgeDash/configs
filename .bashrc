@@ -118,15 +118,21 @@ fi
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
+# start git commit in edit mode
+export GIT_EDITOR='vim +startinsert'
 
 #export PATH=/home/davidliu/anaconda3/bin:/usr/bin:$PATH
 
 # Install Ruby Gems to ~/gems
-export GEM_HOME=$HOME/gems
-export PATH=$HOME/gems/bin:$PATH
+# export GEM_HOME=$HOME/gems
+# export PATH=$HOME/gems/bin:$PATH
 
 # Add snap into path
-export PATH=/snap/bin:$PATH
+# export PATH=/snap/bin:$PATH
 
 # Go
-export PATH=$PATH:/usr/local/go/bin
+# export PATH=$PATH:/usr/local/go/bin
+
+# Disable Software Flow Control (XON/XOFF flow control)
+# https://unix.stackexchange.com/questions/72086/ctrl-s-hang-terminal-emulator
+stty -ixon

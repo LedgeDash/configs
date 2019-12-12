@@ -6,7 +6,7 @@ alias ins='sudo apt-get install'
 # Moving around
 alias cdc='cd ..'
 alias ls='ls -v'
-alias ll='ls -l'
+alias ll='ls -alF'
 alias lla='ls -altv'
 alias la='ls -av'
 
@@ -24,13 +24,11 @@ alias gc='git commit'
 alias gs='git status'
 alias ga='git add'
 alias gp='git push'
-alias gl='git pull'
+alias gu='git pull'
 
 # Remote servers
 alias sns12a='ssh davidliu@sns12a'
 alias portal='ssh hl7@portal.cs.princeton.edu'
-alias rasp='ssh pi@ceres.cs.princeton.edu'
-alias sgv='rm -R ~/gvgraph;scp -r hl7@portal.cs.princeton.edu:~/gvgraph ~'
 
 # VirtualBox
 alias VBoxManage='vboxmanage'
@@ -38,6 +36,7 @@ alias VBoxManage='vboxmanage'
 # Rust dev
 alias cb='cargo build'
 alias cbr='cargo build --release'
+alias cbb='cargo build --release; cargo build'
 
 # firecracker dev
 alias ffc='ps aux | grep firecracker'
