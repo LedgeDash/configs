@@ -19,6 +19,9 @@ set hls "set hlsearch is also valid
 " Wrap text instead of being on one line
 "set lbr
 
+" allow backspace to work over indentation, end-of-line and existing contents
+" More details, see: https://vi.stackexchange.com/questions/2162/why-doesnt-the-backspace-key-work-in-insert-mode
+set backspace=indent,eol,start
 
 " Show the filename of the file currently being edited
 set laststatus=2
