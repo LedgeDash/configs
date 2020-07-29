@@ -60,3 +60,5 @@ fi
 cp "$(dirname "$0")/.profile" ~/.profile
 
 source ~/.bashrc
+
+echo "new bashrc sourced"
