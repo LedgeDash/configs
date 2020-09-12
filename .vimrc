@@ -226,3 +226,14 @@ colorscheme afterglow
 """ Ex Commands
 "" | or <BAR>
 " see more :help :bar
+"
+""" Copy and paste through the system clipboard
+" For a while I suffered unstable copy and paste through the system clipboard.
+" Sometimes it just doesn't work depending on which sytem I'm using and how
+" (e.g., whether it's ssh or not, Ubuntu or Debian). This causes problem when I
+" want to copy from a tmux pane to another tmux pane.
+" This is a quite comprehensive answer to this problem:
+" https://vi.stackexchange.com/questions/84/how-can-i-copy-text-to-the-system-clipboard-from-vim
+" On Ubunut, make sure to install vim-gtk3. This will install a vim binary with
+" the +clipboard option enabled. Moreover, the vim-gtk3 vim binary seems to map
+" yy and pp to go through the system clipboard.
