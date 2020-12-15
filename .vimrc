@@ -237,3 +237,9 @@ colorscheme afterglow
 " On Ubunut, make sure to install vim-gtk3. This will install a vim binary with
 " the +clipboard option enabled. Moreover, the vim-gtk3 vim binary seems to map
 " yy and pp to go through the system clipboard.
+" The default seems to be the following (based on my Ubuntu on Raspberry Pi4):
+" 1. vim/focal,now 2:8.1.2269
+" 2. vim-common/focal,now 2:8.1.2269
+" 3. vim-runtime/focal,now 2:8.1.2269
+" 4. vim-tiny/focal,now 2:8.1.2269
+" So vim-gtk3 is definitely NOT the default.
