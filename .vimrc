@@ -243,3 +243,10 @@ colorscheme afterglow
 " 3. vim-runtime/focal,now 2:8.1.2269
 " 4. vim-tiny/focal,now 2:8.1.2269
 " So vim-gtk3 is definitely NOT the default.
+"
+" Another copy-paste bug is that vim doesn't seem to sync its clipboard until
+" exit. For example, on my Ubuntu Raspberry Pi4, even though I installed
+" vim-gtk3, the following happens:
+" Say I have a vim instance 0 running in tmux window 0 and vim instance 1
+" running in tmux window 1. The only way I can copy and paste from vim 0 to
+" vim 1 is if I yank from vim0, exit and then start vim1 and then paste.
